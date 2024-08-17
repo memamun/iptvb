@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IPTV Channels</title>
+</head>
+<body>
+    <h1>IPTV Channels</h1>
+    <ul>
+    {% for channel in channels %}
+        <li>{{ channel.name }} - <a href="{{ url_for('play', url=channel.url) }}" target="_blank">Watch</a></li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
